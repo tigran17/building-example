@@ -7,9 +7,9 @@ so any dimension or facade decision can be changed and rebuilt in seconds.
 
 ## Repository and deployment
 
-This folder is a Git repository. `Website/` is the complete static site (no build step), and
-`.github/workflows/deploy-pages.yml` publishes it to GitHub Pages on every push to `main` that changes it:
-`https://<github-user>.github.io/<repo>/`.
+This folder is a Git repository: **https://github.com/tigran17/building-example** (public). `Website/` is the
+complete static site (no build step), and `.github/workflows/deploy-pages.yml` publishes it to GitHub Pages on every
+push to `main` that changes it: **https://tigran17.github.io/building-example/** (first deployed 2026-09-28).
 
 | In Git | Not in Git (regenerate with the scripts) |
 |---|---|
