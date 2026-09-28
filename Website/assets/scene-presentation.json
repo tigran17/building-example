@@ -1,0 +1,33 @@
+{
+  "version": "0.8.0",
+  "environment": "komitas-env.hdr",
+  "environmentMobile": "komitas-env-1k.hdr",
+  "sky": "komitas-sky.jpg",
+  "horizon": "#afb2ac",
+  "fog": [
+    700,
+    1500
+  ],
+  "terrainEdge": "#afb2ac",
+  "lighting": {
+    "sunEnergy": 14.0,
+    "sunColor": [
+      1.0,
+      0.9,
+      0.78
+    ],
+    "sunDirection": [
+      80.54,
+      36.96,
+      -46.34
+    ],
+    "skyStrength": 1.0,
+    "hemisphere": 0.35,
+    "exposure": 1.0,
+    "look": "Blender AgX Punchy, 6700 K, toe lift (baked)",
+    "when": "2026-09-20T16:30",
+    "sunElevation": 27.61,
+    "sunAzimuth": 245.35,
+    "intent": "True sun position for Yerevan (40.21 N, 44.51 E) on 20 September, late afternoon."
+  }
+}

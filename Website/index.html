@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#183c31">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="New Komitas">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <meta name="description" content="Explore two New Komitas courtyard buildings in 3D, compare illustrative apartments, and view demo availability and floor plans.">
+  <title>New Komitas · Photoreal 3D</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23183c31'/%3E%3Cpath d='M10 30V13l10-5 10 5v17M16 30V17l4-2 4 2v13' fill='none' stroke='%23cba66d' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css?v=0.12.0">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+  <link rel="modulepreload" href="./vendor/three/three.module.js">
+  <script type="module" src="./app.js?v=0.12.0"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="New Komitas demo home">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 37V14L22 6l16 8v23M13 37V19l9-5 9 5v18M20 37V23l2-1 2 1v14"/></svg>
+      <span>New Komitas<small>Photoreal 3D</small></span>
+    </a>
+    <div class="header-actions"><button id="reference-button" class="quiet">View reference</button><span class="demo-badge"><i></i> Demo inventory</span></div>
+  </header>
+  <main>
+    <aside class="sidebar" id="sidebar" aria-label="Apartment filters and results">
+      <button id="sheet-toggle" class="sheet-toggle" aria-expanded="true" aria-controls="sidebar"><span class="sheet-grip" aria-hidden="true"></span><span class="sheet-title">Apartments <b id="sheet-count"></b></span><span class="sheet-action"><span class="when-open">Hide list</span><span class="when-closed">Show list &amp; filters</span></span></button>
+      <div class="sidebar-intro"><h1>Find your space.</h1><p>Two courtyards. A neighborhood to explore.</p></div>
+      <div class="filters">
+        <label>Building</label>
+        <div class="segmented" id="building-filter" aria-label="Filter by building"><button data-building="all" aria-pressed="true">Both</button><button data-building="A" aria-pressed="false">Courtyard A</button><button data-building="B" aria-pressed="false">Courtyard B</button></div>
+        <div class="filter-row"><label>Floor<select id="floor-filter"><option value="all">All floors</option></select></label><label>Bedrooms<select id="bed-filter"><option value="all">Any</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3 bedrooms</option></select></label></div>
+        <label class="status-label">Availability<select id="status-filter"><option value="all">All sample statuses</option><option value="available">Available</option><option value="reserved">Reserved</option><option value="sold">Sold</option></select></label>
+      </div>
+      <div class="results-heading"><span id="result-count" aria-live="polite">Loading apartments…</span><button id="clear-filters" class="text-button">Reset filters</button></div>
+      <div id="results" class="results" aria-label="Demo apartments"></div>
+      <footer class="sidebar-footer"><span>Sample apartments and availability.</span><button id="notes-button" class="text-button">About this experiment</button></footer>
+    </aside>
+    <section class="stage" aria-label="Interactive 3D model">
+      <div id="canvas-host" aria-label="Rotate the complex by dragging. Scroll or pinch to zoom."></div>
+      <div class="scene-caption"><span class="location-mark">⌖</span><span>New Komitas, Yerevan<small>Photoreal reconstruction · 20 Sep, 16:30 sun</small></span></div>
+      <div class="scene-actions"><button id="reset-camera" aria-label="Reset camera view" title="Reset view">↺</button><button id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button id="motion-toggle" aria-label="Pause traffic and breeze" title="Pause traffic and breeze" aria-pressed="true">Ⅱ</button></div>
+      <div id="loading" class="loading" role="status"><div class="loading-card"><span class="loading-ring"></span><strong>Preparing the neighborhood</strong><span id="loading-message">Loading the 3D model…</span><span class="loading-bar" aria-hidden="true"><i id="loading-bar"></i></span><button id="retry" hidden>Try again</button></div><span class="loading-caption">Photoreal still of the model · the interactive 3D view opens here</span></div>
+      <div id="hover-card" class="hover-card" hidden></div>
+      <div class="bottom-tools"><div class="camera-presets" aria-label="Camera views"><button data-view="A" class="active">Courtyard A</button><button data-view="B">Courtyard B</button></div><button id="availability-toggle" aria-pressed="false"><span class="status-grid" aria-hidden="true">▦</span> Availability</button></div>
+      <p class="interaction-hint"><span class="hint-mouse">Drag to rotate <span>·</span> Right-drag to move <span>·</span> Scroll or double-click to zoom <span>·</span> Select a home</span><span class="hint-touch">Drag to rotate <span>·</span> Two fingers to move and zoom <span>·</span> Double-tap to zoom <span>·</span> Tap a home</span></p>
+      <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Street data © OpenStreetMap contributors</a>
+      <section id="apartment-detail" class="apartment-detail" aria-label="Selected demo apartment" hidden>
+        <button id="close-detail" class="close-button" aria-label="Close apartment details">×</button>
+        <button id="share-detail" class="share-button" aria-label="Share a link to this apartment" title="Share a link to this apartment"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5v10M6 6l4-4 4 4M4.5 10v6.5h11V10"/></svg><span>Share</span></button>
+        <span id="detail-status" class="status-tag"></span>
+        <h2 id="detail-title"></h2><p class="detail-subtitle" id="detail-subtitle"></p>
+        <div class="apartment-facts"><div><strong id="detail-area"></strong><span>Area, m²</span></div><div><strong id="detail-beds"></strong><span>Bedrooms</span></div><div><strong id="detail-floor"></strong><span>Floor</span></div></div>
+        <div id="floor-plan" class="floor-plan"></div><p class="plan-caption">Illustrative floor plan</p>
+        <p class="demo-explanation">This apartment, its location, area and availability are sample data for the experiment.</p>
+        <details class="demo-controls"><summary>Try a demo status change</summary><p>Changes stay in this browser.</p><div id="status-editor"><button data-status="available">Available</button><button data-status="reserved">Reserved</button><button data-status="sold">Sold</button></div><button id="reset-inventory" class="text-button">Reset all demo changes</button></details>
+      </section>
+      <div id="toast" class="toast" role="status" hidden></div>
+      <div id="bench-card" class="bench-card" role="status" hidden></div>
+    </section>
+  </main>
+  <dialog id="reference-dialog"><div class="dialog-header"><div><h2>Project references</h2><p>Original developer imagery used to guide the reconstruction, and photoreal Cycles stills of the new model.</p></div><button class="close-dialog" aria-label="Close references">×</button></div><div class="reference-tabs"><button data-reference="aerial" aria-pressed="true">Aerial</button><button data-reference="facade" aria-pressed="false">Façade</button><button data-reference="model-aerial" aria-pressed="false">Model · aerial</button><button data-reference="model-street" aria-pressed="false">Model · street</button><button data-reference="model-courtyard" aria-pressed="false">Model · courtyard</button></div><img id="reference-image" loading="lazy" decoding="async" src="./assets/reference-aerial.jpeg" alt="Developer aerial rendering of the two New Komitas courtyard blocks"><p class="reference-credit">Source: <a href="https://newkomitas.am/home" target="_blank" rel="noreferrer">New Komitas</a>. This image is reference material; the interactive view is a new reconstructed model.</p></dialog>
+  <dialog id="notes-dialog"><div class="dialog-header"><h2>About this experiment</h2><button class="close-dialog" aria-label="Close project notes">×</button></div><p>Both courtyard blocks are a new model reconstructed from the official renders, the developer's site-plan video and newkomitas.am (18 floors, 1,620 apartments). It includes the stepped north corners, angled balcony trays, copper frames and framed balcony groups. Dimensions are measured from those images, not from architectural drawings (about ±5%).</p><p>The lighting is Blender Cycles for the true sun position in Yerevan on 20 September at 16:30, baked into the model and shown in the same colour transform as the photoreal stills. Glass keeps live reflections of a panorama of the real surroundings.</p><p>Neighbouring buildings, streets, parks and traffic routes come from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap data (ODbL)</a>. Building heights come from OSM levels where tagged and are estimated otherwise. Trees are procedural.</p><p><strong>All apartment data is synthetic.</strong> Unit positions, numbers, areas, plans and available/reserved/sold labels are invented to demonstrate the experience. They are not property listings.</p><p>The model and apartment data are independent, so status changes can be shown without rebuilding the architecture.</p><p>This experiment is separate from the existing apartment and video project.</p></dialog>
+</body>
+</html>

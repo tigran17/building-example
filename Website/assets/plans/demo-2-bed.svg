@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 276" role="img" aria-label="Illustrative 2 bedroom floor plan; not an architectural plan">
+    <rect x="26" y="27" width="237" height="204" fill="#fbfcf9" stroke="#263f34" stroke-width="5"/>
+    <path d="M151 29V231M27 147H151M94 147V231" fill="none" stroke="#263f34" stroke-width="4"/>
+    <rect x="152" y="234" width="111" height="25" fill="#e0e8dd" stroke="#788d77" stroke-width="2"/>
+    <path d="M159 237V255M169 237V255M179 237V255M189 237V255M199 237V255M209 237V255M219 237V255M229 237V255M239 237V255M249 237V255M259 237V255" stroke="#b8c8b2"/>
+    <path d="M157 28H184M216 28H250M26 61V111M263 66V110" stroke="#a5c4c7" stroke-width="7"/>
+    <rect x="170" y="48" width="64" height="66" rx="3" fill="#e4dfcf" stroke="#b9ad91"/><rect x="174" y="53" width="25" height="14" rx="3" fill="#fbfcf9"/><rect x="205" y="53" width="25" height="14" rx="3" fill="#fbfcf9"/>
+    <rect x="36" y="42" width="17" height="75" rx="3" fill="#dce4d7" stroke="#a1b197"/><rect x="61" y="62" width="39" height="45" rx="5" fill="#d9c8ac"/><path d="M106 36H139V120" stroke="#d4d7ce" stroke-width="14" fill="none"/>
+    <rect x="34" y="159" width="20" height="48" rx="5" fill="#e0e7e5" stroke="#a2b5b0"/>
+    <g fill="none" stroke="#263f34" stroke-width="3"><path d="M151 147H263"/></g>
+    <path d="M95 231H123M151 116V140M69 147H89" stroke="#fbfcf9" stroke-width="7"/><path d="M96 230V206Q119 206 120 229M150 116H128Q128 139 150 140" fill="none" stroke="#b6c1b2" stroke-width="1"/>
+    <g font-family="Arial,sans-serif" font-size="8" text-anchor="middle" fill="#657560"><text x="88" y="133">Kitchen / living</text><text x="208" y="134">Bedroom 1</text><text x="64" y="223">Bath</text><text x="121" y="188">Entry</text><text x="207" y="251">Balcony</text><text x="208" y="185">Bedroom 2</text></g>
+  </svg>

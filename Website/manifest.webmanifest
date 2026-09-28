@@ -1,0 +1,15 @@
+{
+  "name": "New Komitas · Photoreal 3D",
+  "short_name": "New Komitas",
+  "description": "Explore the two New Komitas courtyard buildings in photoreal 3D (demo inventory).",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e4eae5",
+  "theme_color": "#183c31",
+  "icons": [
+    {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

@@ -1,0 +1,28 @@
+# macOS / Python
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local tool settings
+.claude/
+
+# Heavy, regenerable outputs: rebuild them with the scripts (README "Rebuild").
+Blender/
+Exports/
+Web-Build/*
+!Web-Build/*.sh
+Renders/*
+!Renders/v7-final/
+Renders/v7-final/*
+!Renders/v7-final/*.jpg
+
+# Not ours to publish: the developer renders sent as references, their crops, and the copy of the original site.
+Reference/user-photo-*.png
+Reference/crops/
+Website-original/
+
+# Site assets the current code no longer loads (kept on disk, not deployed).
+Website/assets/tree/*.png
+Website/assets/tree/canopy-atlas*.webp
+Website/assets/daylight-1k.hdr
+Website/assets/vehicles.glb

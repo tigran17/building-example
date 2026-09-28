@@ -1,0 +1,136 @@
+{
+ "species": [
+  {
+   "name": "Birch",
+   "atlas": "tree/Birch.webp",
+   "atlasMobile": "tree/Birch-mobile.webp",
+   "profile": {
+    "prefix": "Birch",
+    "height": 12.991,
+    "center": [
+     0.0,
+     0.0,
+     6.494
+    ],
+    "captureSize": 14.035,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  },
+  {
+   "name": "Linden",
+   "atlas": "tree/Linden.webp",
+   "atlasMobile": "tree/Linden-mobile.webp",
+   "profile": {
+    "prefix": "Linden",
+    "height": 12.256,
+    "center": [
+     0.0,
+     0.0,
+     6.121
+    ],
+    "captureSize": 13.252,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  },
+  {
+   "name": "Maple",
+   "atlas": "tree/Maple.webp",
+   "atlasMobile": "tree/Maple-mobile.webp",
+   "profile": {
+    "prefix": "Maple",
+    "height": 9.004,
+    "center": [
+     0.0,
+     0.0,
+     4.495
+    ],
+    "captureSize": 9.739,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  },
+  {
+   "name": "Plane",
+   "atlas": "tree/Plane.webp",
+   "atlasMobile": "tree/Plane-mobile.webp",
+   "profile": {
+    "prefix": "Plane",
+    "height": 16.482,
+    "center": [
+     0.0,
+     0.0,
+     8.235
+    ],
+    "captureSize": 17.813,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  },
+  {
+   "name": "Poplar",
+   "atlas": "tree/Poplar.webp",
+   "atlasMobile": "tree/Poplar-mobile.webp",
+   "profile": {
+    "prefix": "Poplar",
+    "height": 17.231,
+    "center": [
+     0.0,
+     0.0,
+     8.605
+    ],
+    "captureSize": 18.633,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  },
+  {
+   "name": "Shrub",
+   "atlas": "tree/Shrub.webp",
+   "atlasMobile": "tree/Shrub-mobile.webp",
+   "profile": {
+    "prefix": "Shrub",
+    "height": 1.887,
+    "center": [
+     0.0,
+     0.0,
+     0.726
+    ],
+    "captureSize": 4.338,
+    "elevations": [
+     25,
+     50,
+     75
+    ],
+    "azimuthCount": 8,
+    "source": "procedural (nk_trees.py), captured in Cycles under the baked sun"
+   }
+  }
+ ]
+}

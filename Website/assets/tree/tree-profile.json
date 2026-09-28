@@ -1,0 +1,39 @@
+{
+  "asset": "Poly Haven tree_small_02",
+  "source": "https://polyhaven.com/a/tree_small_02",
+  "license": "CC0",
+  "height": 4.564,
+  "center": [
+    0.1652868390083313,
+    -0.8390294313430786,
+    2.2832281589508057
+  ],
+  "captureSize": 6.4,
+  "elevations": [
+    25,
+    50,
+    75
+  ],
+  "azimuthCount": 8,
+  "prefix": "broadleaf-v5",
+  "sourceMasterSHA256": "1fa721ff6577bc2192d22bd4476402e92a7eb5d71f4b549528b8757945d1d8d8",
+  "lighting": {
+    "sunEnergy": 3.2,
+    "sunColor": [
+      1,
+      0.82,
+      0.65
+    ],
+    "sunAngleDegrees": 2.2,
+    "sunDirection": [
+      90,
+      240,
+      -140
+    ],
+    "skyStrength": 0.65,
+    "skyRotationDegrees": 118,
+    "exposure": 0.4,
+    "look": "AgX - High Contrast",
+    "intent": "Comfortable early-evening light: low warm sun, longer soft-edged shadows and cool sky fill. Retain rich foliage and gold materials without the harsh midday heat of the prior preview. Art-directed, not a solar survey."
+  }
+}

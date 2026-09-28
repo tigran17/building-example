@@ -1,0 +1,20 @@
+{
+ "source": "new-komitas-complex.glb",
+ "textures": {
+  "lm_NK_A_Shell": "lm_NK_A_Shell.jpg",
+  "lm_NK_A_Balconies": "lm_NK_A_Balconies.jpg",
+  "lm_NK_B_Shell": "lm_NK_B_Shell.jpg",
+  "lm_NK_B_Balconies": "lm_NK_B_Balconies.jpg",
+  "lm_NK_ContextNearW": "lm_NK_ContextNearW.ktx2",
+  "lm_NK_ContextNearE": "lm_NK_ContextNearE.ktx2",
+  "lm_NK_ContextFar": "lm_NK_ContextFar.ktx2",
+  "lm_NK_SiteProps": "lm_NK_SiteProps.ktx2",
+  "lm_NK_Ground_00": "lm_NK_Ground_00.ktx2",
+  "lm_NK_Ground_01": "lm_NK_Ground_01.ktx2",
+  "lm_NK_Ground_10": "lm_NK_Ground_10.ktx2",
+  "lm_NK_Ground_11": "lm_NK_Ground_11.ktx2",
+  "lm_NK_Ground_20": "lm_NK_Ground_20.ktx2",
+  "lm_NK_Ground_21": "lm_NK_Ground_21.ktx2",
+  "lm_NK_Ground_Far": "lm_NK_Ground_Far.ktx2"
+ }
+}
